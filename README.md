@@ -5,6 +5,6 @@
 2. Add `/.vagrant` to your `.gitignnore` file.
 3. `vagrant up`
 
-#### Usage With Everything else
+#### Usage With Everything Else
 1. Use `public` as your root directory.
 2. `vagrant up`

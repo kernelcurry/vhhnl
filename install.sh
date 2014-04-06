@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Author: Michael Curry (Kernelcurry)
+# Website: http://www.kernelcurry.com
+# Github: http://github.com/michaelcurry && http://github.com/kernelcurry
+# Twitter: @kernelcurry
+
 # Variables for colored output
 COLOR_INFO='\e[1;34m'
 COLOR_COMMENT='\e[0;33m'
