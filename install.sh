@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Author: Michael Curry (Kernelcurry)
 # Website: http://www.kernelcurry.com
-# Github: http://github.com/michaelcurry && http://github.com/kernelcurry
+# Github: http://github.com/kernelcurry
 # Twitter: @kernelcurry
 
 # Variables for colored output
@@ -30,7 +30,7 @@ echo "= Baic Packages              ="
 echo "=============================="
 echo -e "${COLOR_NONE}"
 sudo apt-get update
-sudo apt-get install -y unzip vim git-core curl wget build-essential python-software-properties
+sudo apt-get install -y unzip vim git-core curl wget build-essential python-software-properties htop
 
 # PPA && Repositories
 echo -e "${COLOR_COMMENT}"
@@ -69,11 +69,11 @@ echo "=============================="
 echo "= Nginx Config               ="
 echo "=============================="
 echo -e "${COLOR_NONE}"
-cat << EOF | sudo tee -a /etc/nginx/sites-available/laravel
+cat << EOF | sudo tee -a /etc/nginx/sites-available/wordpress
 server {
     listen 80 default_server;
 
-    root /vagrant/public;
+    root /var/www/public/;
     index index.html index.htm index.php index.hh;
 
     server_name localhost;
@@ -101,16 +101,8 @@ server {
 }
 EOF
 sudo rm /etc/nginx/sites-enabled/default
-sudo ln -s /etc/nginx/sites-available/laravel /etc/nginx/sites-enabled/laravel
+sudo ln -s /etc/nginx/sites-available/wordpress /etc/nginx/sites-enabled/wordpress
 sudo service nginx reload
-
-echo -e "${COLOR_COMMENT}"
-echo "=============================="
-echo "= Installing Composer        ="
-echo "=============================="
-echo -e "${COLOR_NONE}"
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
 
 echo -e "${COLOR_INFO}"
 echo "=============================="
