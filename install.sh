@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Author: Michael Curry (Kernelcurry)
-# Website: http://www.kernelcurry.com
 # Github: http://github.com/kernelcurry
 # Twitter: @kernelcurry
 

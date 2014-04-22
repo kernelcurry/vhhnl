@@ -1,4 +1,4 @@
-## Vagrant HHVM Hack Nginx Laravel
+## HHVM Hack Nginx
 
 #### Usage With Laravel
 1. Copy `Vagrantfile` and `install.sh` into your Laravel root directory.
