@@ -73,7 +73,7 @@ server {
     listen 80 default_server;
 
     root /var/www/public/;
-    index index.html index.htm index.php index.hh;
+    index index.html index.htm index.php;
 
     server_name localhost;
 
