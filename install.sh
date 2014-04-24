@@ -4,6 +4,9 @@
 # Github: http://github.com/kernelcurry
 # Twitter: @kernelcurry
 
+# Get Ubuntu version name
+VERSION=`lsb_release -c -s`
+
 # Variables for colored output
 COLOR_INFO='\e[1;34m'
 COLOR_COMMENT='\e[0;33m'
@@ -40,7 +43,7 @@ echo -e "${COLOR_NONE}"
 sudo add-apt-repository -y ppa:nginx/stable
 sudo add-apt-repository -y ppa:mapnik/boost
 wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | sudo apt-key add -
-echo deb http://dl.hhvm.com/ubuntu precise main | sudo tee /etc/apt/sources.list.d/hhvm.list
+echo deb http://dl.hhvm.com/ubuntu $VERSION main | sudo tee /etc/apt/sources.list.d/hhvm.list
 sudo apt-get update
 
 # Nginx
