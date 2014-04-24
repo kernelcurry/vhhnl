@@ -72,7 +72,7 @@ cat << EOF | sudo tee -a /etc/nginx/sites-available/wordpress
 server {
     listen 80 default_server;
 
-    root /var/www/public/;
+    root /var/www/public;
     index index.html index.htm index.php;
 
     server_name localhost;
