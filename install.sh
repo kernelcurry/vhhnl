@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Author: Michael Curry (Kernelcurry)
-# Github: http://github.com/kernelcurry
-# Twitter: @kernelcurry
+# Author: @kernelcurry
+# http://github.com/kernelcurry
+# Author: @chuckreynolds
+# http://github.com/chuckreynolds
 
 # Get Ubuntu version name
 VERSION=`lsb_release -c -s`
@@ -17,11 +18,11 @@ COLOR_NONE='\e[0m' # No Color
 echo -e "${COLOR_INFO}"
 echo "=============================="
 echo "=        HHVM && HACK        ="
-echo "=      Nginx && Laravel      ="
+echo "=           Nginx            ="
 echo "=============================="
 echo "= This script is to be used  ="
 echo "= to install HHVM and HACK   ="
-echo "= on ubuntu 12.0.4           ="
+echo "= on Ubuntu                  ="
 echo "=============================="
 echo -e "${COLOR_NONE}"
 
