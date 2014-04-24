@@ -59,6 +59,7 @@ echo "=============================="
 echo -e "${COLOR_NONE}"
 sudo apt-get install -y hhvm
 sudo /usr/share/hhvm/install_fastcgi.sh
+sudo update-rc.d hhvm defaults
 sudo /etc/init.d/hhvm restart
 sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60
 
