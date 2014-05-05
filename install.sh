@@ -76,6 +76,12 @@ server {
     root /vagrant/public;
     index index.html index.htm index.php index.hh;
 
+    # serve static files directly    
+    location ~* \.(jpg|jpeg|gif|css|png|js|ico|html|svg|ttf|woff)$ {
+        access_log off;
+        expires max;
+    }
+    
     server_name localhost;
 
     access_log /var/log/nginx/access.log;
